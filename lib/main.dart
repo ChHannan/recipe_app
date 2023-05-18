@@ -1,5 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:recipe_app/screens/home_screen.dart';
 import 'package:recipe_app/screens/login_screen.dart';
 
@@ -10,7 +11,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(const RecipeApp());
+  runApp(const ProviderScope(child: RecipeApp()));
 }
 
 class RecipeApp extends StatelessWidget {
@@ -22,7 +23,11 @@ class RecipeApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Recipe App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        fontFamily: 'Product Sans',
+        pageTransitionsTheme: const PageTransitionsTheme(builders: {
+          TargetPlatform.android: CupertinoPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        }),
       ),
       initialRoute: '/',
       routes: {
