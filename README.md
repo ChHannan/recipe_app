@@ -1,16 +1,39 @@
 # recipe_app
 
-A new Flutter project.
+This is a Flutter project that utilizes Firebase as the backend. The project follows the MVVM architecture with a repository layer for communication with Firebase.
 
-## Getting Started
+## Prerequisites
 
-This project is a starting point for a Flutter application.
+Before running the project, make sure you have the following prerequisites:
 
-A few resources to get you started if this is your first Flutter project:
+- Flutter SDK installed
+- Dart SDK installed
+- Registered user credentials:
+    - Email: testuser@gmail.com
+    - Password: user123
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Dependencies
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The project relies on the following dependencies:
+
+- `flutter_native_splash`
+- `firebase_core`
+- `firebase_auth`
+- `flutter_riverpod`
+- `cloud_firestore`
+- `cached_network_image`
+
+To install these dependencies, run the following command:
+
+```
+flutter pub get
+```
+
+Run the project on a simulator or physical device:
+
+```
+flutter run
+```
+
+### Demo Video
+To see a demo of the project, you can watch it here [Demo Video](https://drive.google.com/file/d/1ek2bE5e05LNEuHXeHo3u4r5Vmu02Hx-i/view?usp=sharing).
